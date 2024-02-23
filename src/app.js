@@ -40,8 +40,8 @@ app.post("/restaurants", async (req,res) => {
 });
 
 app.put("/restaurants/:id", async (req,res) => {
-    const updateRest = await Restaurant.update(req.body, {where: {id: req.params.id}}
-        res.json(updatedRest));
+    const updateRest = await Restaurant.update(req.body, {where: {id: req.params.id}});
+        res.json(updatedRest);
 });
 
 app.delete("/restaurants/:id", async (req,res) => {
